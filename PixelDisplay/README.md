@@ -7,6 +7,7 @@ A versatile reusable, resizable, responsive canvas component to show pixels on t
 - [Pixel Display](#pixel-display)
 - [Table of Content](#table-of-content)
 - [Details](#details)
+- [Templates](#templates)
 
 # Details 
 
@@ -28,3 +29,16 @@ Additionally, check example of changing dimensions from 8x8 to 64x64 pixels with
 ![pikachu8x8](img/pikachu8x8.png)
 
 ![pikachu64x64](img/pikachu64x64.png)
+
+# Templates
+
+In case you want to share your pixel art with the community, you can add it with a pull request to the `\templates` folder. 
+
+**Be mindful of usage rights and only add open source or allowed materials for public usage**
+
+Please use the following naming convention:
+`[name]_[pixelwidth]x[pixelheight].json`
+
+Example: **pikachu_16x16.json**
+
+If needed, include any additional material (img, txt, ...) with the same name.

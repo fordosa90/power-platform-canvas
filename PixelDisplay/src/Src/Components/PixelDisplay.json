@@ -1,0 +1,73 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "PixelDisplay",
+    "TemplateGuid": "3e5dc6688ba24a16823d0bac805087a7"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Data",
+      "Hidden": false,
+      "Name": "inpData",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Data to be shown on the pixel display at the moment",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Pixel Padding",
+      "Hidden": false,
+      "Name": "inpPixelPadding",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "The padding to be applied between pixels of the display",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Screen Color",
+      "Hidden": false,
+      "Name": "inpScreenColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "The default background color of the display behind pixels",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Screen Height",
+      "Hidden": false,
+      "Name": "inpScreenHeight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "The number of pixels making up the height of the display",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Screen Width",
+      "Hidden": false,
+      "Name": "inpScreenWidth",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "The number of pixels making up the width of the display",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638027550119561913",
+  "Name": "3e5dc6688ba24a16823d0bac805087a7",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "c2223375f1fd4b9688d966a1a9f4b52f",
+  "Version": "638004163626802951"
+}

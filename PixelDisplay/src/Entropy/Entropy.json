@@ -1,0 +1,65 @@
+{
+  "ComponentIndexes": {
+    "PixelDisplay": 1
+  },
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "galColumns": 7,
+    "galleryTemplate1": 6,
+    "galleryTemplate3": 8,
+    "galRows": 5,
+    "PixelDisplay": 4,
+    "Screen1": 3,
+    "shpPixel": 9
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "10/30/2022 19:38:27",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OldLogoFileName": "olyhuegc.jpg",
+  "OrderComponentMetadata": {
+    "3e5dc6688ba24a16823d0bac805087a7": 0
+  },
+  "OrderComponentTemplate": {
+    "3e5dc6688ba24a16823d0bac805087a7": 0
+  },
+  "OrderDataSource": {
+    "CustomGallerySample": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "gallery": 0,
+    "rectangle": 1
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "galColumns": 2,
+    "galleryTemplate1": 1,
+    "galleryTemplate3": 3,
+    "galRows": 0,
+    "PixelDisplay": 0,
+    "Screen1": 0,
+    "shpPixel": 4
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.020666299999999999,
+    "ControlCount": {
+      "3e5dc6688ba24a16823d0bac805087a7": 2,
+      "gallery": 2,
+      "galleryTemplate": 2,
+      "rectangle": 1
+    },
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}

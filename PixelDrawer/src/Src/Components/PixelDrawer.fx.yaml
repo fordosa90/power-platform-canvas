@@ -1,0 +1,76 @@
+PixelDrawer As CanvasComponent:
+    Fill: =PixelDrawer.inpScreenColor
+    Height: =768
+    inpDebug: =true
+    inpPaintColor: =RGBA(1,1,1,1)
+    inpPixelPadding: =0
+    inpScreenColor: |-
+        =ColorValue("#FAFAFA")
+    inpScreenHeight: =16
+    inpScreenWidth: =16
+    OnReset: |
+        =ClearCollect(colDisplayData,
+                    ForAll(Sequence(PixelDrawer.inpScreenHeight) As colTmpRow,
+                        AddColumns(
+                            RenameColumns(
+                                Sequence(PixelDrawer.inpScreenWidth),
+                                "Value",
+                                "X"),
+                            "Value",  Match(JSON(PixelDrawer.inpPaintColor, JSONFormat.IgnoreUnsupportedTypes),"[a-fA-F0-9]{6}").FullMatch,
+                            "Y", colTmpRow.Value)))
+    Width: =768
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "galRows As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =Parent.Height
+        Items: =colDisplayData
+        Layout: =Layout.Vertical
+        TemplatePadding: =0.00
+        TemplateSize: =Min((Self.Width-(PixelDrawer.inpScreenWidth+1)*PixelDrawer.inpPixelPadding)/PixelDrawer.inpScreenWidth,(Self.Height-(PixelDrawer.inpScreenHeight+1)*PixelDrawer.inpPixelPadding)/PixelDrawer.inpScreenHeight)
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =1
+
+        "galColumns As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            Height: =Parent.Height
+            Items: =ThisItem.Value
+            TemplatePadding: =PixelDrawer.inpPixelPadding
+            TemplateSize: =Min((Self.Width-(PixelDrawer.inpScreenWidth+1)*PixelDrawer.inpPixelPadding)/PixelDrawer.inpScreenWidth,(Self.Height-(PixelDrawer.inpScreenHeight+1)*PixelDrawer.inpPixelPadding)/PixelDrawer.inpScreenHeight)
+            Width: =Parent.Width
+            Y: =0.00
+            ZIndex: =6
+
+            shpPixel As rectangle:
+                Fill: |-
+                    =ColorValue("#" & ThisItem.Value)
+                Height: =Self.Width
+                OnSelect: |-
+                    =ClearCollect(colSelectedRow, Index(colDisplayData, galColumns.Selected.Y).Value);
+                    Patch(colSelectedRow, 
+                            Index(colSelectedRow, galColumns.Selected.X),
+                            { Value: Match(JSON(PixelDrawer.inpPaintColor, JSONFormat.IgnoreUnsupportedTypes),"[a-fA-F0-9]{6}").FullMatch });
+                    If(IsBlank(colSelectedRow), true , Patch(colDisplayData, 
+                            Index(colDisplayData, galColumns.Selected.Y),
+                            { Value: colSelectedRow }));
+                Width: =Parent.TemplateWidth
+                Y: =0.00
+                ZIndex: =1
+
+            Label4 As label:
+                Height: =20
+                OnSelect: =Select(Parent)
+                Size: =8
+                Text: |-
+                    =If(ThisItem.Y = 1 && ThisItem.X = 1, "[", "") & 
+                    If(ThisItem.X = 1, "[", "") & 
+                    Char(34) & ThisItem.Value & Char(34) & 
+                    If(ThisItem.X = PixelDrawer.inpScreenWidth, "]",",") &
+                    If(ThisItem.X = PixelDrawer.inpScreenWidth && ThisItem.Y = PixelDrawer.inpScreenHeight, "]",",")
+                Visible: =PixelDrawer.inpDebug
+                Width: =shpPixel.Width
+                X: =shpPixel.X
+                Y: =shpPixel.Y
+                ZIndex: =3
+

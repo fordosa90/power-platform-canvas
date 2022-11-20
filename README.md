@@ -9,6 +9,7 @@ Various Canvas apps and components to be reused for MSFT PowerPlatform developme
 - [How-To](#how-to)
 - [Details](#details)
   - [PixelDisplay](#pixeldisplay)
+  - [PixelDrawer](#pixeldrawer)
 
 # How-To
 
@@ -18,7 +19,7 @@ The apps are stored as their unpacked version. To gain the usable *.msapp file, 
 
 Official documentation: [PAC CLI](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/canvas#pac-canvas-unpack)
 
-**Short summary**: after installing PAC CLI, run command `pac canvas unpack --msapp HelloWorld.msapp --source src` 
+**Short summary**: after installing PAC CLI, run command `pac canvas unpack --msapp HelloWorld.msapp --sources src` 
 
 # Details
 
@@ -27,3 +28,9 @@ Official documentation: [PAC CLI](https://learn.microsoft.com/en-us/power-platfo
 A versatile reusable, resizable, responsive canvas component to show pixels on the screen based on input configuration.
 
 More details: [LINK](PixelDisplay/README.md)
+
+## PixelDrawer
+
+A drawing component enabling to draw Pixel arts within Canvas app and then reuse either in third party tools or with the PixelDisplay component.
+
+More details: [LINK](PixelDrawer/README.md)

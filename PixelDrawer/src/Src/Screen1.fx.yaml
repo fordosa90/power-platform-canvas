@@ -1,0 +1,539 @@
+Screen1 As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(215, 223, 240, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        ZIndex: =2
+
+    Rectangle1_56 As rectangle:
+        Fill: =varPaintColor
+        Height: =85
+        Width: =560
+        X: =806
+        Y: =683
+        ZIndex: =58
+
+    Rectangle1_1 As rectangle:
+        Fill: =RGBA(232, 244, 217, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        ZIndex: =59
+
+    Rectangle1_2 As rectangle:
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        ZIndex: =60
+
+    Rectangle1_3 As rectangle:
+        Fill: =RGBA(238, 204, 204, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        ZIndex: =61
+
+    Rectangle1_4 As rectangle:
+        Fill: =RGBA(204, 231, 246, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        ZIndex: =62
+
+    Rectangle1_5 As rectangle:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        ZIndex: =63
+
+    Rectangle1_6 As rectangle:
+        Fill: =RGBA(137, 112, 93, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        ZIndex: =64
+
+    Rectangle1_7 As rectangle:
+        Fill: =RGBA(175, 191, 224, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =85
+        ZIndex: =65
+
+    Rectangle1_8 As rectangle:
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =85
+        ZIndex: =66
+
+    Rectangle1_9 As rectangle:
+        Fill: =RGBA(251, 188, 159, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =85
+        ZIndex: =67
+
+    Rectangle1_10 As rectangle:
+        Fill: =RGBA(220, 153, 153, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =85
+        ZIndex: =68
+
+    Rectangle1_11 As rectangle:
+        Fill: =RGBA(153, 207, 236, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =85
+        ZIndex: =69
+
+    Rectangle1_12 As rectangle:
+        Fill: =RGBA(0, 121, 187, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =85
+        ZIndex: =70
+
+    Rectangle1_13 As rectangle:
+        Fill: =RGBA(206, 177, 151, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =85
+        ZIndex: =71
+
+    Rectangle1_14 As rectangle:
+        Fill: =RGBA(136, 160, 209, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =170
+        ZIndex: =72
+
+    Rectangle1_15 As rectangle:
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =170
+        ZIndex: =73
+
+    Rectangle1_16 As rectangle:
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =170
+        ZIndex: =74
+
+    Rectangle1_17 As rectangle:
+        Fill: =RGBA(203, 102, 102, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =170
+        ZIndex: =75
+
+    Rectangle1_18 As rectangle:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =170
+        ZIndex: =76
+
+    Rectangle1_19 As rectangle:
+        Fill: =RGBA(253, 245, 241, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =170
+        ZIndex: =77
+
+    Rectangle1_20 As rectangle:
+        Fill: =RGBA(31, 34, 40, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =170
+        ZIndex: =78
+
+    Rectangle1_21 As rectangle:
+        Fill: =RGBA(50, 86, 160, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =255
+        ZIndex: =79
+
+    Rectangle1_22 As rectangle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =255
+        ZIndex: =80
+
+    Rectangle1_23 As rectangle:
+        Fill: =RGBA(221, 79, 14, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =255
+        ZIndex: =81
+
+    Rectangle1_24 As rectangle:
+        Fill: =RGBA(151, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =255
+        ZIndex: =82
+
+    Rectangle1_25 As rectangle:
+        Fill: =RGBA(0, 121, 187, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =255
+        ZIndex: =83
+
+    Rectangle1_26 As rectangle:
+        Fill: =RGBA(190, 83, 64, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =255
+        ZIndex: =84
+
+    Rectangle1_27 As rectangle:
+        Fill: =RGBA(95, 63, 49, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =255
+        ZIndex: =85
+
+    Rectangle1_28 As rectangle:
+        Fill: =RGBA(39, 67, 125, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =340
+        ZIndex: =86
+
+    Rectangle1_29 As rectangle:
+        Fill: =RGBA(99, 139, 44, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =340
+        ZIndex: =87
+
+    Rectangle1_30 As rectangle:
+        Fill: =RGBA(172, 62, 11, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =340
+        ZIndex: =88
+
+    Rectangle1_31 As rectangle:
+        Fill: =RGBA(118, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =340
+        ZIndex: =89
+
+    Rectangle1_32 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =340
+        ZIndex: =90
+
+    Rectangle1_33 As rectangle:
+        Fill: =RGBA(235, 138, 6, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =340
+        ZIndex: =91
+
+    Rectangle1_34 As rectangle:
+        Fill: =RGBA(54, 32, 20, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =340
+        ZIndex: =92
+
+    Rectangle1_35 As rectangle:
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =425
+        ZIndex: =93
+
+    Rectangle1_36 As rectangle:
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =425
+        ZIndex: =94
+
+    Rectangle1_37 As rectangle:
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =425
+        ZIndex: =95
+
+    Rectangle1_38 As rectangle:
+        Fill: =RGBA(168, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =425
+        ZIndex: =96
+
+    Rectangle1_39 As rectangle:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =425
+        ZIndex: =97
+
+    Rectangle1_40 As rectangle:
+        Fill: =RGBA(27, 20, 30, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =425
+        ZIndex: =98
+
+    Rectangle1_41 As rectangle:
+        Fill: =RGBA(6, 1, 1, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =425
+        ZIndex: =99
+
+    Rectangle1_42 As rectangle:
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =510
+        ZIndex: =100
+
+    Rectangle1_43 As rectangle:
+        Fill: =RGBA(255, 255, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =510
+        ZIndex: =101
+
+    Rectangle1_44 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =510
+        ZIndex: =102
+
+    Rectangle1_45 As rectangle:
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =510
+        ZIndex: =103
+
+    Rectangle1_46 As rectangle:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =510
+        ZIndex: =104
+
+    Rectangle1_47 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =510
+        ZIndex: =105
+
+    Rectangle1_48 As rectangle:
+        Fill: =RGBA(184, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =510
+        ZIndex: =106
+
+    Rectangle1_49 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =806
+        Y: =595
+        ZIndex: =107
+
+    Rectangle1_50 As rectangle:
+        Fill: =RGBA(9, 33, 98, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =886
+        Y: =595
+        ZIndex: =108
+
+    Rectangle1_51 As rectangle:
+        Fill: =RGBA(14, 156, 26, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =966
+        Y: =595
+        ZIndex: =109
+
+    Rectangle1_52 As rectangle:
+        Fill: =RGBA(19, 235, 105, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1046
+        Y: =595
+        ZIndex: =110
+
+    Rectangle1_53 As rectangle:
+        Fill: =RGBA(140, 83, 65, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1126
+        Y: =595
+        ZIndex: =111
+
+    Rectangle1_54 As rectangle:
+        Fill: =RGBA(235, 9, 77, 1)
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1206
+        Y: =595
+        ZIndex: =112
+
+    Rectangle1_55 As rectangle:
+        Height: =85
+        OnSelect: =Set(varPaintColor, Self.Fill)
+        Width: =80
+        X: =1286
+        Y: =595
+        ZIndex: =113
+
+    Label1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Size: =22
+        Text: ="Selected Color"
+        Width: =491
+        X: =839
+        Y: =705
+        ZIndex: =114
+
+    Button1 As button:
+        OnSelect: =Reset(PixelDrawer_1)
+        Text: ="Reset"
+        X: =304
+        Y: =705
+        ZIndex: =115
+
+    PixelDrawer_1 As PixelDrawer:
+        Fill: =PixelDrawer_1.inpScreenColor
+        Height: =680
+        inpPaintColor: =varPaintColor
+        OnReset: |
+            =ClearCollect(colDisplayData,
+                        ForAll(Sequence(PixelDrawer_1.inpScreenHeight) As colTmpRow,
+                            AddColumns(
+                                RenameColumns(
+                                    Sequence(PixelDrawer_1.inpScreenWidth),
+                                    "Value",
+                                    "X"),
+                                "Value",  Match(JSON(PixelDrawer_1.inpPaintColor, JSONFormat.IgnoreUnsupportedTypes),"[a-fA-F0-9]{6}").FullMatch,
+                                "Y", colTmpRow.Value)))
+        Width: =784
+        ZIndex: =116
+

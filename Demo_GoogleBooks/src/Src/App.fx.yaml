@@ -1,0 +1,4 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: =Clear(bookCollection); Reset(galResults); Set(enableDialog, false); Reset(inpAuthor); Reset(inpSearch); Reset(inpFilter); Reset(inpLang)
+

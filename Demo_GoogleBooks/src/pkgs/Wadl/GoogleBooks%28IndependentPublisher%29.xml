@@ -1,0 +1,450 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/googlebooksip" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="GoogleBooks(IndependentPublisher)" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Google Books (Independent Publisher)">Search and discover data and details about and within books available in the vast library of Google</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/googlebooksip" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="SearchVolume_responses_200_def_kind_def" />
+      <integer name="SearchVolume_responses_200_def_totalItems_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_kind_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_id_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_etag_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_selfLink_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_title_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_authors_def_items_def" />
+      <array type="string" name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_authors_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_publisher_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_publishedDate_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_description_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def_items_def_type_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def_items_def_identifier_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def_items_def">
+        <property name="type" type="string" />
+        <property name="identifier" type="string" />
+      </object>
+      <array typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def_items_def" name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_readingModes_def_text_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_readingModes_def_image_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_readingModes_def">
+        <property name="text" type="boolean" />
+        <property name="image" type="boolean" />
+      </object>
+      <integer name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_pageCount_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_printType_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_categories_def_items_def" />
+      <array type="string" name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_categories_def" />
+      <number name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_averageRating_def" />
+      <integer name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_ratingsCount_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_maturityRating_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_allowAnonLogging_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_contentVersion_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_panelizationSummary_def_containsEpubBubbles_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_panelizationSummary_def_containsImageBubbles_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_panelizationSummary_def">
+        <property name="containsEpubBubbles" type="boolean" />
+        <property name="containsImageBubbles" type="boolean" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_imageLinks_def_smallThumbnail_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_imageLinks_def_thumbnail_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_imageLinks_def">
+        <property name="smallThumbnail" type="string" />
+        <property name="thumbnail" type="string" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_language_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_previewLink_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_infoLink_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_canonicalVolumeLink_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_subtitle_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def">
+        <property name="title" type="string" />
+        <property name="authors" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_authors_def" />
+        <property name="publisher" type="string" />
+        <property name="publishedDate" type="string" />
+        <property name="description" type="string" />
+        <property name="industryIdentifiers" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_industryIdentifiers_def" />
+        <property name="readingModes" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_readingModes_def" />
+        <property name="pageCount" type="integer" />
+        <property name="printType" type="string" />
+        <property name="categories" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_categories_def" />
+        <property name="averageRating" type="number" />
+        <property name="ratingsCount" type="integer" />
+        <property name="maturityRating" type="string" />
+        <property name="allowAnonLogging" type="boolean" />
+        <property name="contentVersion" type="string" />
+        <property name="panelizationSummary" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_panelizationSummary_def" />
+        <property name="imageLinks" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def_imageLinks_def" />
+        <property name="language" type="string" />
+        <property name="previewLink" type="string" />
+        <property name="infoLink" type="string" />
+        <property name="canonicalVolumeLink" type="string" />
+        <property name="subtitle" type="string" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_country_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_saleability_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_isEbook_def" />
+      <number name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_listPrice_def_amount_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_listPrice_def_currencyCode_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_listPrice_def">
+        <property name="amount" type="number" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <number name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_retailPrice_def_amount_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_retailPrice_def_currencyCode_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_retailPrice_def">
+        <property name="amount" type="number" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_buyLink_def" />
+      <integer name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_finskyOfferType_def" />
+      <integer name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_listPrice_def_amountInMicros_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_listPrice_def_currencyCode_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_listPrice_def">
+        <property name="amountInMicros" type="integer" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <integer name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_retailPrice_def_amountInMicros_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_retailPrice_def_currencyCode_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_retailPrice_def">
+        <property name="amountInMicros" type="integer" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_giftable_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def">
+        <property name="finskyOfferType" type="integer" />
+        <property name="listPrice" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_listPrice_def" />
+        <property name="retailPrice" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def_retailPrice_def" />
+        <property name="giftable" type="boolean" />
+      </object>
+      <array typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def_items_def" name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def">
+        <property name="country" type="string" />
+        <property name="saleability" type="string" />
+        <property name="isEbook" type="boolean" />
+        <property name="listPrice" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_listPrice_def" />
+        <property name="retailPrice" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_retailPrice_def" />
+        <property name="buyLink" type="string" />
+        <property name="offers" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def_offers_def" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_country_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_viewability_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_embeddable_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_publicDomain_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_textToSpeechPermission_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_epub_def_isAvailable_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_epub_def_acsTokenLink_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_epub_def">
+        <property name="isAvailable" type="boolean" />
+        <property name="acsTokenLink" type="string" />
+      </object>
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_pdf_def_isAvailable_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_pdf_def_acsTokenLink_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_pdf_def">
+        <property name="isAvailable" type="boolean" />
+        <property name="acsTokenLink" type="string" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_webReaderLink_def" />
+      <string name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_accessViewStatus_def" />
+      <boolean name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_quoteSharingAllowed_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def">
+        <property name="country" type="string" />
+        <property name="viewability" type="string" />
+        <property name="embeddable" type="boolean" />
+        <property name="publicDomain" type="boolean" />
+        <property name="textToSpeechPermission" type="string" />
+        <property name="epub" typeRef="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_epub_def" />
+        <property name="pdf" typeRef="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def_pdf_def" />
+        <property name="webReaderLink" type="string" />
+        <property name="accessViewStatus" type="string" />
+        <property name="quoteSharingAllowed" type="boolean" />
+      </object>
+      <string name="SearchVolume_responses_200_def_items_def_items_def_searchInfo_def_textSnippet_def" />
+      <object name="SearchVolume_responses_200_def_items_def_items_def_searchInfo_def">
+        <property name="textSnippet" type="string" />
+      </object>
+      <object name="SearchVolume_responses_200_def_items_def_items_def">
+        <property name="kind" type="string" />
+        <property name="id" type="string" />
+        <property name="etag" type="string" />
+        <property name="selfLink" type="string" />
+        <property name="volumeInfo" typeRef="SearchVolume_responses_200_def_items_def_items_def_volumeInfo_def" />
+        <property name="saleInfo" typeRef="SearchVolume_responses_200_def_items_def_items_def_saleInfo_def" />
+        <property name="accessInfo" typeRef="SearchVolume_responses_200_def_items_def_items_def_accessInfo_def" />
+        <property name="searchInfo" typeRef="SearchVolume_responses_200_def_items_def_items_def_searchInfo_def" />
+      </object>
+      <array typeRef="SearchVolume_responses_200_def_items_def_items_def" name="SearchVolume_responses_200_def_items_def" />
+      <object name="SearchVolume_responses_200_def">
+        <property name="kind" type="string" />
+        <property name="totalItems" type="integer" />
+        <property name="items" typeRef="SearchVolume_responses_200_def_items_def" />
+      </object>
+      <string name="GetVolume_responses_200_def_kind_def" />
+      <string name="GetVolume_responses_200_def_id_def" />
+      <string name="GetVolume_responses_200_def_etag_def" />
+      <string name="GetVolume_responses_200_def_selfLink_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_title_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_subtitle_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_authors_def_items_def" />
+      <array type="string" name="GetVolume_responses_200_def_volumeInfo_def_authors_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_publisher_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_publishedDate_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_description_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def_items_def_type_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def_items_def_identifier_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def_items_def">
+        <property name="type" type="string" />
+        <property name="identifier" type="string" />
+      </object>
+      <array typeRef="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def_items_def" name="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def" />
+      <boolean name="GetVolume_responses_200_def_volumeInfo_def_readingModes_def_text_def" />
+      <boolean name="GetVolume_responses_200_def_volumeInfo_def_readingModes_def_image_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def_readingModes_def">
+        <property name="text" type="boolean" />
+        <property name="image" type="boolean" />
+      </object>
+      <integer name="GetVolume_responses_200_def_volumeInfo_def_pageCount_def" />
+      <integer name="GetVolume_responses_200_def_volumeInfo_def_printedPageCount_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_dimensions_def_height_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_dimensions_def_width_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_dimensions_def_thickness_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def_dimensions_def">
+        <property name="height" type="string" />
+        <property name="width" type="string" />
+        <property name="thickness" type="string" />
+      </object>
+      <string name="GetVolume_responses_200_def_volumeInfo_def_printType_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_categories_def_items_def" />
+      <array type="string" name="GetVolume_responses_200_def_volumeInfo_def_categories_def" />
+      <number name="GetVolume_responses_200_def_volumeInfo_def_averageRating_def" />
+      <integer name="GetVolume_responses_200_def_volumeInfo_def_ratingsCount_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_maturityRating_def" />
+      <boolean name="GetVolume_responses_200_def_volumeInfo_def_allowAnonLogging_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_contentVersion_def" />
+      <boolean name="GetVolume_responses_200_def_volumeInfo_def_panelizationSummary_def_containsEpubBubbles_def" />
+      <boolean name="GetVolume_responses_200_def_volumeInfo_def_panelizationSummary_def_containsImageBubbles_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def_panelizationSummary_def">
+        <property name="containsEpubBubbles" type="boolean" />
+        <property name="containsImageBubbles" type="boolean" />
+      </object>
+      <string name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def_smallThumbnail_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def_thumbnail_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def_small_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def_medium_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def_large_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def">
+        <property name="smallThumbnail" type="string" />
+        <property name="thumbnail" type="string" />
+        <property name="small" type="string" />
+        <property name="medium" type="string" />
+        <property name="large" type="string" />
+      </object>
+      <string name="GetVolume_responses_200_def_volumeInfo_def_language_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_previewLink_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_infoLink_def" />
+      <string name="GetVolume_responses_200_def_volumeInfo_def_canonicalVolumeLink_def" />
+      <object name="GetVolume_responses_200_def_volumeInfo_def">
+        <property name="title" type="string" />
+        <property name="subtitle" type="string" />
+        <property name="authors" typeRef="GetVolume_responses_200_def_volumeInfo_def_authors_def" />
+        <property name="publisher" type="string" />
+        <property name="publishedDate" type="string" />
+        <property name="description" type="string" />
+        <property name="industryIdentifiers" typeRef="GetVolume_responses_200_def_volumeInfo_def_industryIdentifiers_def" />
+        <property name="readingModes" typeRef="GetVolume_responses_200_def_volumeInfo_def_readingModes_def" />
+        <property name="pageCount" type="integer" />
+        <property name="printedPageCount" type="integer" />
+        <property name="dimensions" typeRef="GetVolume_responses_200_def_volumeInfo_def_dimensions_def" />
+        <property name="printType" type="string" />
+        <property name="categories" typeRef="GetVolume_responses_200_def_volumeInfo_def_categories_def" />
+        <property name="averageRating" type="number" />
+        <property name="ratingsCount" type="integer" />
+        <property name="maturityRating" type="string" />
+        <property name="allowAnonLogging" type="boolean" />
+        <property name="contentVersion" type="string" />
+        <property name="panelizationSummary" typeRef="GetVolume_responses_200_def_volumeInfo_def_panelizationSummary_def" />
+        <property name="imageLinks" typeRef="GetVolume_responses_200_def_volumeInfo_def_imageLinks_def" />
+        <property name="language" type="string" />
+        <property name="previewLink" type="string" />
+        <property name="infoLink" type="string" />
+        <property name="canonicalVolumeLink" type="string" />
+      </object>
+      <string name="GetVolume_responses_200_def_layerInfo_def_layers_def_items_def_layerId_def" />
+      <string name="GetVolume_responses_200_def_layerInfo_def_layers_def_items_def_volumeAnnotationsVersion_def" />
+      <object name="GetVolume_responses_200_def_layerInfo_def_layers_def_items_def">
+        <property name="layerId" type="string" />
+        <property name="volumeAnnotationsVersion" type="string" />
+      </object>
+      <array typeRef="GetVolume_responses_200_def_layerInfo_def_layers_def_items_def" name="GetVolume_responses_200_def_layerInfo_def_layers_def" />
+      <object name="GetVolume_responses_200_def_layerInfo_def">
+        <property name="layers" typeRef="GetVolume_responses_200_def_layerInfo_def_layers_def" />
+      </object>
+      <string name="GetVolume_responses_200_def_saleInfo_def_country_def" />
+      <string name="GetVolume_responses_200_def_saleInfo_def_saleability_def" />
+      <boolean name="GetVolume_responses_200_def_saleInfo_def_isEbook_def" />
+      <number name="GetVolume_responses_200_def_saleInfo_def_listPrice_def_amount_def" />
+      <string name="GetVolume_responses_200_def_saleInfo_def_listPrice_def_currencyCode_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def_listPrice_def">
+        <property name="amount" type="number" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <number name="GetVolume_responses_200_def_saleInfo_def_retailPrice_def_amount_def" />
+      <string name="GetVolume_responses_200_def_saleInfo_def_retailPrice_def_currencyCode_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def_retailPrice_def">
+        <property name="amount" type="number" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <string name="GetVolume_responses_200_def_saleInfo_def_buyLink_def" />
+      <integer name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_finskyOfferType_def" />
+      <integer name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_listPrice_def_amountInMicros_def" />
+      <string name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_listPrice_def_currencyCode_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_listPrice_def">
+        <property name="amountInMicros" type="integer" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <integer name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_retailPrice_def_amountInMicros_def" />
+      <string name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_retailPrice_def_currencyCode_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_retailPrice_def">
+        <property name="amountInMicros" type="integer" />
+        <property name="currencyCode" type="string" />
+      </object>
+      <boolean name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_giftable_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def">
+        <property name="finskyOfferType" type="integer" />
+        <property name="listPrice" typeRef="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_listPrice_def" />
+        <property name="retailPrice" typeRef="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def_retailPrice_def" />
+        <property name="giftable" type="boolean" />
+      </object>
+      <array typeRef="GetVolume_responses_200_def_saleInfo_def_offers_def_items_def" name="GetVolume_responses_200_def_saleInfo_def_offers_def" />
+      <object name="GetVolume_responses_200_def_saleInfo_def">
+        <property name="country" type="string" />
+        <property name="saleability" type="string" />
+        <property name="isEbook" type="boolean" />
+        <property name="listPrice" typeRef="GetVolume_responses_200_def_saleInfo_def_listPrice_def" />
+        <property name="retailPrice" typeRef="GetVolume_responses_200_def_saleInfo_def_retailPrice_def" />
+        <property name="buyLink" type="string" />
+        <property name="offers" typeRef="GetVolume_responses_200_def_saleInfo_def_offers_def" />
+      </object>
+      <string name="GetVolume_responses_200_def_accessInfo_def_country_def" />
+      <string name="GetVolume_responses_200_def_accessInfo_def_viewability_def" />
+      <boolean name="GetVolume_responses_200_def_accessInfo_def_embeddable_def" />
+      <boolean name="GetVolume_responses_200_def_accessInfo_def_publicDomain_def" />
+      <string name="GetVolume_responses_200_def_accessInfo_def_textToSpeechPermission_def" />
+      <boolean name="GetVolume_responses_200_def_accessInfo_def_epub_def_isAvailable_def" />
+      <string name="GetVolume_responses_200_def_accessInfo_def_epub_def_acsTokenLink_def" />
+      <object name="GetVolume_responses_200_def_accessInfo_def_epub_def">
+        <property name="isAvailable" type="boolean" />
+        <property name="acsTokenLink" type="string" />
+      </object>
+      <boolean name="GetVolume_responses_200_def_accessInfo_def_pdf_def_isAvailable_def" />
+      <string name="GetVolume_responses_200_def_accessInfo_def_pdf_def_acsTokenLink_def" />
+      <object name="GetVolume_responses_200_def_accessInfo_def_pdf_def">
+        <property name="isAvailable" type="boolean" />
+        <property name="acsTokenLink" type="string" />
+      </object>
+      <string name="GetVolume_responses_200_def_accessInfo_def_webReaderLink_def" />
+      <string name="GetVolume_responses_200_def_accessInfo_def_accessViewStatus_def" />
+      <boolean name="GetVolume_responses_200_def_accessInfo_def_quoteSharingAllowed_def" />
+      <object name="GetVolume_responses_200_def_accessInfo_def">
+        <property name="country" type="string" />
+        <property name="viewability" type="string" />
+        <property name="embeddable" type="boolean" />
+        <property name="publicDomain" type="boolean" />
+        <property name="textToSpeechPermission" type="string" />
+        <property name="epub" typeRef="GetVolume_responses_200_def_accessInfo_def_epub_def" />
+        <property name="pdf" typeRef="GetVolume_responses_200_def_accessInfo_def_pdf_def" />
+        <property name="webReaderLink" type="string" />
+        <property name="accessViewStatus" type="string" />
+        <property name="quoteSharingAllowed" type="boolean" />
+      </object>
+      <object name="GetVolume_responses_200_def">
+        <property name="kind" type="string" />
+        <property name="id" type="string" />
+        <property name="etag" type="string" />
+        <property name="selfLink" type="string" />
+        <property name="volumeInfo" typeRef="GetVolume_responses_200_def_volumeInfo_def" />
+        <property name="layerInfo" typeRef="GetVolume_responses_200_def_layerInfo_def" />
+        <property name="saleInfo" typeRef="GetVolume_responses_200_def_saleInfo_def" />
+        <property name="accessInfo" typeRef="GetVolume_responses_200_def_accessInfo_def" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/googlebooksip">
+    <resource path="/{connectionId}/volumes">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="SearchVolume" actionName="SearchVolume" siena:isDeprecated="false">
+        <doc title="Search Volumes&#xA;Query multiple volumes and books within the public Google library." />
+        <request>
+          <param style="query" name="q" type="xs:string" required="true">
+            <doc title="A valid query string for the Google Books API" />
+          </param>
+          <param style="query" name="maxResults" type="xs:long">
+            <doc title="The maximum number of results to return. Default is 10, max. allowed is 40" />
+          </param>
+          <param style="query" name="filter" type="xs:string">
+            <doc title="Set preset search filter to restrict the returned results" />
+            <option value="partial" />
+            <option value="full" />
+            <option value="free-ebooks" />
+            <option value="paid-ebooks" />
+            <option value="ebooks" />
+          </param>
+          <param style="query" name="startIndex" type="xs:long">
+            <doc title="The position in the collection at which to start. Index for the first item is 0" />
+          </param>
+          <param style="query" name="printType" type="xs:string">
+            <doc title="Use print type to restrict results to a specific print or publication type" />
+            <option value="all" />
+            <option value="books" />
+            <option value="magazines" />
+          </param>
+          <param style="query" name="projection" type="xs:string">
+            <doc title="Restrict the returned fields with a predefined set" />
+            <option value="full" />
+            <option value="lite" />
+          </param>
+          <param style="query" name="orderBy" type="xs:string">
+            <doc title="Set the ordering of results by one of the options. Default is relevance" />
+            <option value="relevance" />
+            <option value="newest" />
+          </param>
+          <param style="query" name="langRestrict" type="xs:string">
+            <doc title="Restrict to results that are tagged with the specified ISO-639-1 language code, eg. fr" />
+          </param>
+          <param style="query" name="fields" type="xs:string">
+            <doc title="Select a custom subset of fields which should be returned with the results instead of all" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:SearchVolume_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/volumes/{volumeId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="volumeId" type="xs:string" required="true">
+        <doc title="A valid and unique Google Books volume ID" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetVolume" actionName="GetVolume" siena:isDeprecated="false">
+        <doc title="Get Volume&#xA;Get a specific volume data by ID." />
+        <request>
+          <param style="query" name="projection" type="xs:string">
+            <doc title="Restrict the returned fields with a predefined set" />
+            <option value="full" />
+            <option value="lite" />
+          </param>
+          <param style="query" name="langRestrict" type="xs:string">
+            <doc title="Restrict to results that are tagged with the specified ISO-639-1 language code, eg. fr" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetVolume_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_googlebooksip" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

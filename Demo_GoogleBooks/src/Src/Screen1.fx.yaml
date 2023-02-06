@@ -1,0 +1,495 @@
+Screen1 As screen:
+
+    imgBackground As image:
+        Height: =1136
+        Image: =backg
+        Width: =640
+        ZIndex: =1
+
+    lblApp As label:
+        Align: =Align.Center
+        Color: =RGBA(204, 204, 204, 1)
+        Height: =70
+        Size: =21
+        Text: ="Books"
+        Underline: =true
+        Width: =640
+        ZIndex: =2
+
+    btnSearch As button:
+        BorderColor: =RGBA(179, 179, 179, 1)
+        Color: =RGBA(179, 179, 179, 1)
+        Fill: |-
+            =ColorValue("#151d3a")
+        Height: =86
+        OnSelect: |-
+            =ClearCollect(bookCollection, 
+                'GoogleBooks(IndependentPublisher)'.SearchVolume(
+                    inpSearch.Text & If(IsBlank(inpAuthor.Text),"","+inauthor:"&inpAuthor.Text),
+                    {
+                        langRestrict:If(IsBlank(inpLang.Text), "en", inpLang.Text), 
+                        filter:If(IsBlank(inpFilter.Text), "ebooks", inpFilter.Text)
+                    }).items)
+        PaddingLeft: =20
+        PressedFill: |-
+            =ColorValue("#5064b0")
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =24
+        Text: ="Search"
+        Width: =214
+        X: =219
+        Y: =1009
+        ZIndex: =12
+
+    grpFilter As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        btnFilter As button:
+            BorderColor: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =62
+            HoverColor: =
+            HoverFill: =
+            Size: =24
+            Text: ="Button"
+            Width: =251
+            X: =56
+            Y: =917
+            ZIndex: =13
+
+        inpFilter As text:
+            BorderThickness: =0
+            Color: =RGBA(179, 179, 179, 1)
+            Default: =""
+            Fill: =RGBA(28, 39, 77, 1)
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =55
+            HintText: |-
+                ="(eg.: ebooks)"
+            HoverColor: =RGBA(80, 100, 176, 1)
+            HoverFill: =
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =21
+            Width: =231
+            X: =65
+            Y: =921
+            ZIndex: =14
+
+        lblFilter As label:
+            Color: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =20
+            Size: =17
+            Text: ="Filter"
+            Width: =70
+            X: =66
+            Y: =904
+            ZIndex: =15
+
+    grpLanguage As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        btnLanguage As button:
+            BorderColor: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =62
+            Size: =24
+            Text: ="Button"
+            Width: =251
+            X: =345
+            Y: =917
+            ZIndex: =9
+
+        inpLang As text:
+            BorderThickness: =0
+            Color: =RGBA(179, 179, 179, 1)
+            Default: =""
+            Fill: =RGBA(28, 39, 77, 1)
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =55
+            HintText: ="(en)"
+            HoverColor: =RGBA(80, 100, 176, 1)
+            HoverFill: =
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =21
+            Width: =231
+            X: =354
+            Y: =921
+            ZIndex: =10
+
+        lblLanguage As label:
+            Color: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =28
+            Size: =17
+            Text: ="Language Code"
+            Width: =173
+            X: =354
+            Y: =900
+            ZIndex: =11
+
+    grpAuthor As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        btnAuthor As button:
+            BorderColor: =RGBA(204, 204, 204, 1)
+            Color: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =62
+            Size: =24
+            Text: ="Button"
+            Width: =540
+            X: =56
+            Y: =806
+            ZIndex: =6
+
+        inpAuthor As text:
+            BorderThickness: =0
+            Color: =RGBA(204, 204, 204, 1)
+            Default: =""
+            Fill: =RGBA(28, 39, 77, 1)
+            FocusedBorderThickness: =
+            Height: =55
+            HintText: ="(Text input)"
+            HoverColor: =RGBA(80, 100, 176, 1)
+            HoverFill: =
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =21
+            Width: =518
+            X: =66
+            Y: =810
+            ZIndex: =7
+
+        lblAuthor As label:
+            Color: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =27
+            Size: =17
+            Text: ="Search Author"
+            Width: =166
+            X: =66
+            Y: =792
+            ZIndex: =8
+
+    grpSearchText As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        btnSearchText As button:
+            BorderColor: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =62
+            Size: =24
+            Text: ="Button"
+            Width: =540
+            X: =56
+            Y: =698
+            ZIndex: =3
+
+        inpSearch As text:
+            BorderThickness: =0
+            Color: =RGBA(204, 204, 204, 1)
+            Default: =""
+            Fill: =RGBA(28, 39, 77, 1)
+            FocusedBorderThickness: =
+            Height: =55
+            HintText: ="(Text input)"
+            HoverColor: =RGBA(80, 100, 176, 1)
+            HoverFill: =
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            Size: =21
+            Width: =518
+            X: =66
+            Y: =702
+            ZIndex: =4
+
+        lblSearchText As label:
+            Color: =RGBA(204, 204, 204, 1)
+            Fill: =RGBA(28, 39, 77, 1)
+            Height: =31
+            Size: =17
+            Text: ="Overall Search"
+            Width: =166
+            X: =66
+            Y: =681
+            ZIndex: =5
+
+    grpResults As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        "galResults As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            Default: ={}
+            Height: =408
+            Items: =bookCollection
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =295
+            Visible: =If(CountRows(bookCollection) > 0, true, false)
+            Width: =620
+            Y: =100
+            ZIndex: =16
+
+            backButton As button:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =388
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =40
+                RadiusBottomRight: =40
+                RadiusTopLeft: =40
+                RadiusTopRight: =40
+                Size: =24
+                Text: =""
+                Width: =272
+                X: =11
+                Y: =16
+                ZIndex: =1
+
+            Image4 As image:
+                Height: =268
+                Image: =ThisItem.volumeInfo.imageLinks.thumbnail
+                OnSelect: =Select(Parent)
+                Width: =272
+                X: =11
+                Y: =40
+                ZIndex: =2
+
+            Title2 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 16, 96, 1)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.volumeInfo.title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 64
+                X: =32
+                Y: =Image4.Y + Image4.Height + 16
+                ZIndex: =3
+
+            Subtitle2 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 16, 96, 1)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =First(ThisItem.volumeInfo.authors).Value
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Title2.Width
+                X: =Title2.X
+                Y: =Title2.Y + Title2.Height + 8
+                ZIndex: =4
+
+            frontButton As button:
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =387
+                HoverColor: =
+                HoverFill: =
+                OnSelect: =Select(Parent);Set(enableDialog,true)
+                PressedColor: =
+                PressedFill: =
+                Size: =24
+                Text: =""
+                Width: =283
+                Y: =17
+                ZIndex: =5
+
+        lblResults As label:
+            Color: =RGBA(204, 204, 204, 1)
+            Height: =70
+            Size: =21
+            Text: |-
+                ="Results: " & CountRows(bookCollection)
+            Visible: =If(CountRows(bookCollection) > 0, true, false)
+            Width: =560
+            X: =30
+            Y: =508
+            ZIndex: =17
+
+    grpPopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        rctPopup As rectangle:
+            Fill: =RGBA(4, 13, 31, 0.35)
+            Height: =1136
+            Visible: =enableDialog
+            Width: =640
+            ZIndex: =18
+
+        btnPopupHeader As button:
+            Fill: =RGBA(2, 23, 54, 1)
+            Height: =216
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =24
+            Text: =""
+            Visible: =enableDialog
+            Width: =582
+            X: =30
+            Y: =157
+            ZIndex: =19
+
+        htmlPopupBackground As htmlViewer:
+            Height: =517
+            HtmlText: |-
+                ="<div style='width:10%,height:100%'><img src='https://c4.wallpaperflare.com/wallpaper/123/305/138/digital-art-nature-landscape-hills-wallpaper-preview.jpg'></img></div>"
+            Visible: =enableDialog
+            Width: =594
+            X: =24
+            Y: =199
+            ZIndex: =20
+
+        btnPopupBackground As button:
+            BorderThickness: =0
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =
+            Height: =647
+            HoverBorderColor: =
+            HoverColor: =
+            HoverFill: =
+            RadiusBottomLeft: =60
+            RadiusBottomRight: =60
+            RadiusTopLeft: =60
+            RadiusTopRight: =60
+            Size: =24
+            Text: =""
+            Visible: =enableDialog
+            Width: =591
+            X: =24
+            Y: =438
+            ZIndex: =21
+
+        htmlPopupImage As htmlViewer:
+            Height: =167
+            HtmlText: |-
+                ="<div><img style='width:100%,height:100%,border-radius:50%' src='" & galResults.Selected.volumeInfo.imageLinks.thumbnail & "'></img></div>"
+            Visible: =enableDialog
+            Width: =137
+            X: =256
+            Y: =356
+            ZIndex: =22
+
+        lblPopupTitle As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =21
+            Text: =galResults.Selected.volumeInfo.title
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =533
+            ZIndex: =23
+
+        lblPopupAuthor As label:
+            Height: =70
+            Size: =21
+            Text: =First(galResults.Selected.volumeInfo.authors).Value
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =586
+            ZIndex: =24
+
+        lblPopupDescription As label:
+            Height: =224
+            Size: =21
+            Text: =Left(galResults.Selected.volumeInfo.description,200) & "..."
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =646
+            ZIndex: =25
+
+        htmlPopupLink As htmlViewer:
+            Height: =70
+            HtmlText: |-
+                ="More info: <a href='" & galResults.Selected.volumeInfo.previewLink & "'>LINK</a>"
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =870
+            ZIndex: =26
+
+        lblPopupLanguage As label:
+            Height: =70
+            Size: =21
+            Text: |-
+                ="Language: " & galResults.Selected.volumeInfo.language
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =913
+            ZIndex: =27
+
+        lblPopupPrice As label:
+            Height: =70
+            Size: =21
+            Text: =galResults.Selected.saleInfo.listPrice.amount & " " & galResults.Selected.saleInfo.listPrice.currencyCode
+            Visible: =enableDialog
+            Width: =560
+            X: =46
+            Y: =1009
+            ZIndex: =28
+
+        lblPopupPrint As label:
+            Height: =70
+            Size: =21
+            Text: |-
+                ="Print: " & galResults.Selected.volumeInfo.printType
+            Visible: =enableDialog
+            Width: =219
+            X: =419
+            Y: =913
+            ZIndex: =29
+
+        icnPopupCancel As icon.Cancel:
+            Icon: =Icon.Cancel
+            OnSelect: =Reset(galResults); Set(enableDialog, false)
+            Visible: =enableDialog
+            X: =518
+            Y: =1009
+            ZIndex: =30
+

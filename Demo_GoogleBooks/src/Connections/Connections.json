@@ -1,0 +1,22 @@
+{
+  "4ca6bf7c-ed70-41a4-ae60-d205a8adb0fa": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "Google Books (Independent Publisher)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1612/1.0.1612.3109/googlebooksip/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_googlebooksip",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "GoogleBooks(IndependentPublisher)"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4ca6bf7c-ed70-41a4-ae60-d205a8adb0fa"
+  }
+}
